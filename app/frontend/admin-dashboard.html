@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Quizora Admin</title>
+    <link rel="stylesheet" href="css/styles.css?v=6">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg></span>
+                <span class="gradient-text">Quizora</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">Admin Portal</div>
+                <a href="admin-dashboard.html" class="active"><span class="nav-icon"><svg width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg></span> Dashboard</a>
+                <a href="question-bank.html"><span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg></span> Question Bank</a>
+                <a href="results.html"><span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg></span> Candidate Results</a>
+                <div class="nav-section">Account</div>
+                <div class="sidebar-user-profile"
+                    style="padding:10px 12px;margin:8px 8px 12px;border-radius:var(--radius-sm);background:rgba(255,255,255,0.04);border:1px solid var(--border-glass);display:flex;align-items:center;gap:10px;">
+                    <div style="width:32px;height:32px;border-radius:50%;background:rgba(34,211,238,0.15);border:1px solid rgba(34,211,238,0.3);color:var(--accent-cyan);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;"
+                        id="userInitials">AD</div>
+                    <div style="min-width:0;flex:1;">
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"
+                            id="sidebarUserName">Admin</div>
+                        <div style="font-size:0.75rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"
+                            id="sidebarUserEmail">admin@quizora.com</div>
+                    </div>
+                </div>
+                <a href="#" onclick="logout()"><span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg></span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, <span id="userName">Admin</span>! Here's your overview.</p>
+                </div>
+                <div style="display:flex;gap:8px;">
+                    <button class="btn btn-sm btn-outline" id="sidebarToggle" style="display:none;">☰</button>
+                    <a href="question-bank.html" class="btn btn-primary btn-sm">+ Add Question</a>
+                </div>
+            </div>
+
+            <!-- Instructor Student Access Code Banner -->
+            <div class="exam-code-banner">
+                <div class="exam-code-left">
+                    <div class="exam-code-icon-box">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div class="exam-code-text-group">
+                        <div class="exam-code-label">Student Exam Access Code</div>
+                        <div class="exam-code-row">
+                            <span class="exam-code-badge" id="adminExamCodeDisplay">QUIZ-TECH</span>
+                            <span class="exam-code-hint">Students enter this unique code to start taking your
+                                exam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="exam-code-actions">
+                    <button class="btn btn-sm btn-primary" id="copyCodeBtn" onclick="copyExamCode()"
+                        title="Copy exam access code to clipboard">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span id="copyBtnText">Copy Code</span>
+                    </button>
+                    <a id="studentDemoBtn" href="interview.html" target="_blank" class="btn btn-sm btn-outline"
+                        style="color:var(--accent-cyan);border-color:rgba(34,211,238,0.35);">
+                        Test Exam ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <div class="glass-card kpi-card">
+                    <div class="kpi-icon cyan"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg></div>
+                    <div class="kpi-info">
+                        <h3 id="kpiInterviews">0</h3>
+                        <p>Total Exams Taken</p>
+                        <span class="kpi-change up">↑ 12%</span>
+                    </div>
+                </div>
+                <div class="glass-card kpi-card">
+                    <div class="kpi-icon violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 14 14"></polyline>
+                        </svg></div>
+                    <div class="kpi-info">
+                        <h3 id="kpiAvgScore">0</h3>
+                        <p>Average Score</p>
+                        <span class="kpi-change up">↑ 5%</span>
+                    </div>
+                </div>
+                <div class="glass-card kpi-card">
+                    <div class="kpi-icon emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="kpi-info">
+                        <h3 id="kpiPassRate">0%</h3>
+                        <p>Pass Rate</p>
+                        <span class="kpi-change up">↑ 8%</span>
+                    </div>
+                </div>
+                <div class="glass-card kpi-card">
+                    <div class="kpi-icon rose"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg></div>
+                    <div class="kpi-info">
+                        <h3 id="kpiQuestions">0</h3>
+                        <p>Total Questions</p>
+                        <span class="kpi-change up">↑ 3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-grid">
+                <div class="glass-card chart-card">
+                    <h3>Interview Scores Overview</h3>
+                    <div class="chart-container">
+                        <canvas id="barChart" height="260"></canvas>
+                    </div>
+                </div>
+                <div class="glass-card chart-card">
+                    <h3>Category Distribution</h3>
+                    <div class="chart-container" style="display:flex;align-items:center;justify-content:center;">
+                        <canvas id="donutChart" width="220" height="220"></canvas>
+                    </div>
+                    <div id="donutLegend"
+                        style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;justify-content:center;"></div>
+                </div>
+            </div>
+
+            <!-- Recent Exam Submissions Table -->
+            <div class="glass-card table-card">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+                    <h3>Recent Exam Submissions</h3>
+                    <a href="results.html" class="btn btn-sm btn-outline">View All →</a>
+                </div>
+                <div style="overflow-x:auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Date</th>
+                                <th>Technical</th>
+                                <th>HR</th>
+                                <th>Overall</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/app.js?v=3"></script>
+    <script src="js/dashboard.js?v=3"></script>
+</body>
+
+</html>

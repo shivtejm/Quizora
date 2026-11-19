@@ -1,0 +1,524 @@
+[
+  {
+    "id": 1795068931799,
+    "name": "Isha",
+    "email": "isha@gmail.com",
+    "adminEmail": "sakshi@gmail.com",
+    "examCode": "54321",
+    "date": "2026-11-19",
+    "overallScore": 0,
+    "technical": 0,
+    "hr": 0,
+    "communication": 0,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 1795066982375,
+        "question": "What is the output of this code?\n\nString a = new String(\"Hello\");\nString b = new String(\"Hello\");\n\nSystem.out.println(a == b);\nSystem.out.println(a.equals(b));",
+        "category": "Technical",
+        "answer": "Option B: false true",
+        "score": 0,
+        "feedback": "✗ Incorrect. You selected Option ?: \"Option B: false true\". The correct answer is Option B: \"false true\".",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795067091342,
+    "name": "Shivtej",
+    "email": "shivtej.connect@gmail.com",
+    "adminEmail": "sakshi@gmail.com",
+    "examCode": "54321",
+    "date": "2026-11-19",
+    "overallScore": 0,
+    "technical": 0,
+    "hr": 0,
+    "communication": 0,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 1795066982375,
+        "question": "What is the output of this code?\n\nString a = new String(\"Hello\");\nString b = new String(\"Hello\");\n\nSystem.out.println(a == b);\nSystem.out.println(a.equals(b));",
+        "category": "Technical",
+        "answer": "Option C: true false",
+        "score": 0,
+        "feedback": "✗ Incorrect. You selected Option ?: \"Option C: true false\". The correct answer is Option B: \"false true\".",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795067009515,
+    "name": "Sakshi Gade",
+    "email": "sakshi@gmail.com",
+    "adminEmail": "sakshi@gmail.com",
+    "examCode": "54321",
+    "date": "2026-11-19",
+    "overallScore": 0,
+    "technical": 0,
+    "hr": 0,
+    "communication": 0,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 1795066982375,
+        "question": "What is the output of this code?\n\nString a = new String(\"Hello\");\nString b = new String(\"Hello\");\n\nSystem.out.println(a == b);\nSystem.out.println(a.equals(b));",
+        "category": "Technical",
+        "answer": "Option B: false true",
+        "score": 0,
+        "feedback": "✗ Incorrect. You selected Option ?: \"Option B: false true\". The correct answer is Option B: \"false true\".",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795011729224,
+    "name": "Shivtej",
+    "email": "shivtej.connect@gmail.com",
+    "adminEmail": "sakshi@gmail.com",
+    "examCode": "54321",
+    "date": "2026-11-18",
+    "overallScore": 9,
+    "technical": 13,
+    "hr": 0,
+    "communication": 18,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 1795011199015,
+        "question": "What are RESTful APIs and what architectural constraints do they follow?",
+        "category": "Technical",
+        "answer": "1",
+        "score": 26,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 1795011199016,
+        "question": "Explain microservices architecture and how services communicate reliably.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 1795011199017,
+        "question": "Describe a challenging technical project you delivered and how you resolved roadblocks.",
+        "category": "HR",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795011685472,
+    "name": "Shivtej Mahatme",
+    "email": "shivtej.connect@gmail.com",
+    "adminEmail": "admin@sies.ai",
+    "examCode": "SIES-TECH",
+    "date": "2026-11-18",
+    "overallScore": 0,
+    "technical": 0,
+    "hr": 0,
+    "communication": 0,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 0,
+        "question": "Explain the difference between var, let, and const in JavaScript.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "What is the Virtual DOM and how does React optimize UI rendering?",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Explain the concept of closures in JavaScript with a real-world use case.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "What are RESTful APIs and what architectural constraints do they follow?",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Explain microservices architecture and how services communicate reliably.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Describe a challenging technical project you delivered and how you resolved roadblocks.",
+        "category": "HR",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795011133891,
+    "name": "Shivtej",
+    "email": "shivtej.connect@gmail.com",
+    "adminEmail": "shivtej.connect@gmail.com",
+    "examCode": "12345",
+    "date": "2026-11-18",
+    "overallScore": 26,
+    "technical": 26,
+    "hr": 26,
+    "communication": 53,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 1795009989949,
+        "question": "Explain the difference between var, let, and const in JavaScript.",
+        "category": "Technical",
+        "answer": "ee",
+        "score": 26,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 1795009989950,
+        "question": "What is the Virtual DOM and how does React optimize UI rendering?",
+        "category": "Technical",
+        "answer": "ee",
+        "score": 26,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 1795009989951,
+        "question": "Explain the concept of closures in JavaScript with a real-world use case.",
+        "category": "Technical",
+        "answer": "ee",
+        "score": 26,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 1795009989952,
+        "question": "What are RESTful APIs and what architectural constraints do they follow?",
+        "category": "Technical",
+        "answer": "ee",
+        "score": 26,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 1795009989953,
+        "question": "Explain microservices architecture and how services communicate reliably.",
+        "category": "Technical",
+        "answer": "ee",
+        "score": 26,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 1795009989954,
+        "question": "Describe a challenging technical project you delivered and how you resolved roadblocks.",
+        "category": "HR",
+        "answer": "ee",
+        "score": 26,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795010130187,
+    "name": "Shivtej",
+    "email": "shivtej.connect@gmail.com",
+    "adminEmail": "admin@sies.ai",
+    "examCode": "SIES-TECH",
+    "date": "2026-11-18",
+    "overallScore": 0,
+    "technical": 0,
+    "hr": 0,
+    "communication": 0,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 0,
+        "question": "Explain the difference between var, let, and const in JavaScript.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "What is the Virtual DOM and how does React optimize UI rendering?",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Explain the concept of closures in JavaScript with a real-world use case.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "What are RESTful APIs and what architectural constraints do they follow?",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Explain microservices architecture and how services communicate reliably.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Describe a challenging technical project you delivered and how you resolved roadblocks.",
+        "category": "HR",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795010061292,
+    "name": "Shivtej",
+    "email": "mahatmeshivtej0@gmail.com",
+    "adminEmail": "admin@sies.ai",
+    "examCode": "SIES-TECH",
+    "date": "2026-11-18",
+    "overallScore": 0,
+    "technical": 0,
+    "hr": 0,
+    "communication": 0,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 0,
+        "question": "Explain the difference between var, let, and const in JavaScript.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "What is the Virtual DOM and how does React optimize UI rendering?",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Explain the concept of closures in JavaScript with a real-world use case.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "What are RESTful APIs and what architectural constraints do they follow?",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Explain microservices architecture and how services communicate reliably.",
+        "category": "Technical",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      },
+      {
+        "questionId": 0,
+        "question": "Describe a challenging technical project you delivered and how you resolved roadblocks.",
+        "category": "HR",
+        "answer": "",
+        "score": 0,
+        "feedback": "No response submitted for this question.",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 1795005950467,
+    "name": "Ananya Sen",
+    "email": "ananya.sen@college.edu",
+    "adminEmail": "prof.sharma@college.edu",
+    "examCode": "SIES-CS101",
+    "date": "2026-11-18",
+    "overallScore": 45,
+    "technical": 45,
+    "hr": 0,
+    "communication": 100,
+    "status": "Failed",
+    "questionResults": [
+      {
+        "questionId": 101,
+        "question": "Explain QuickSort partition logic and its average vs worst-case time complexity.",
+        "category": "Technical",
+        "answer": "QuickSort chooses a pivot element and partitions the array such that all smaller elements go before the pivot and larger elements after. The average time complexity is O(n log n), while worst-case is O(n^2) if the pivot is the smallest or largest element each time.",
+        "score": 45,
+        "feedback": "Basic response. Needs more technical vocabulary and structured detail.",
+        "keywordsFound": []
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Aarav Sharma",
+    "email": "aarav.sharma@example.com",
+    "adminEmail": "admin@sies.ai",
+    "examCode": "SIES-TECH",
+    "date": "2026-11-18",
+    "overallScore": 92,
+    "technical": 95,
+    "hr": 88,
+    "communication": 90,
+    "status": "Passed",
+    "questionResults": [
+      {
+        "questionId": 1,
+        "question": "Explain the difference between var, let, and const in JavaScript.",
+        "category": "Technical",
+        "score": 95,
+        "feedback": "Accurately detailed lexical scoping and block immutability.",
+        "answer": "var is function-scoped while let and const are block-scoped. const cannot be reassigned."
+      },
+      {
+        "questionId": 2,
+        "question": "What is the Virtual DOM and how does it improve performance?",
+        "category": "Technical",
+        "score": 92,
+        "feedback": "Excellent explanation of diffing algorithm.",
+        "answer": "Virtual DOM minimizes actual browser DOM reflows by calculating diffs in memory."
+      },
+      {
+        "questionId": 3,
+        "question": "Describe a challenging project you worked on and how you overcame obstacles.",
+        "category": "HR",
+        "score": 88,
+        "feedback": "Well-structured STAR technique response.",
+        "answer": "Led a migration of a monolithic app to microservices under strict deadlines."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Priya Patel",
+    "email": "priya.patel@example.com",
+    "adminEmail": "admin@sies.ai",
+    "examCode": "SIES-TECH",
+    "date": "2026-11-17",
+    "overallScore": 88,
+    "technical": 86,
+    "hr": 92,
+    "communication": 90,
+    "status": "Passed",
+    "questionResults": [
+      {
+        "questionId": 1,
+        "question": "Explain the difference between var, let, and const in JavaScript.",
+        "category": "Technical",
+        "score": 90,
+        "feedback": "Clear explanation of hoisting differences.",
+        "answer": "let and const are block scoped and not hoisted in the same way as var."
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "name": "Vikram Malhotra",
+    "email": "vikram.m@college.edu",
+    "adminEmail": "prof.sharma@college.edu",
+    "examCode": "SIES-CS101",
+    "date": "2026-11-18",
+    "overallScore": 85,
+    "technical": 88,
+    "hr": 80,
+    "communication": 86,
+    "status": "Passed",
+    "questionResults": [
+      {
+        "questionId": 101,
+        "question": "Explain QuickSort partition logic and its average vs worst-case time complexity.",
+        "category": "Technical",
+        "score": 90,
+        "feedback": "Clear explanation of pivot selection and O(n log n) expected time.",
+        "answer": "Lomuto or Hoare partitioning puts elements smaller than pivot on left. Worst case O(n^2) occurs on already sorted input with poor pivot."
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Sneha Roy",
+    "email": "sneha.roy@college.edu",
+    "adminEmail": "prof.sharma@college.edu",
+    "examCode": "SIES-CS101",
+    "date": "2026-11-16",
+    "overallScore": 68,
+    "technical": 65,
+    "hr": 72,
+    "communication": 70,
+    "status": "Review",
+    "questionResults": [
+      {
+        "questionId": 102,
+        "question": "What is ACID compliance in relational database management systems?",
+        "category": "Technical",
+        "score": 65,
+        "feedback": "Mentioned Atomicity and Consistency, but lacked detail on Isolation levels.",
+        "answer": "ACID stands for Atomicity, Consistency, Isolation, and Durability."
+      }
+    ]
+  }
+]

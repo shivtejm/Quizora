@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination - Quizora</title>
+    <link rel="stylesheet" href="css/styles.css?v=6">
+</head>
+
+<body>
+    <div class="interview-container">
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="interview-welcome">
+            <div class="welcome-icon-badge">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+            </div>
+            <h1>Welcome to Your <span class="gradient-text">Online Examination</span></h1>
+            <p>You will be presented with structured examination questions. Select the correct option for each question within the
+                time limit. Your responses will be graded automatically upon submission.</p>
+            <div class="info-cards">
+                <div class="glass-card info-card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg></div>
+                    <h4 id="totalQLabel">10 Questions</h4>
+                    <p>Technical & HR</p>
+                </div>
+                <div class="glass-card info-card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg></div>
+                    <h4>3 Min Each</h4>
+                    <p>Per Question</p>
+                </div>
+                <div class="glass-card info-card">
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 20V10"></path>
+                            <path d="M12 20V4"></path>
+                            <path d="M6 20v-6"></path>
+                        </svg></div>
+                    <h4>Automated</h4>
+                    <p>Evaluation Engine</p>
+                </div>
+            </div>
+            <!-- Exam Access Code Input -->
+            <div class="form-group" style="max-width:400px;margin:0 auto 16px;text-align:left;">
+                <label for="examAccessCode" style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>Exam Access Code <span style="color:var(--accent-cyan);">*</span></span>
+                    <small style="color:var(--text-muted);font-weight:normal;">From your examiner / teacher</small>
+                </label>
+                <div style="position:relative;">
+                    <input type="text" id="examAccessCode" placeholder="Enter code (e.g. QUIZ-TECH)"
+                        style="text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding-right:40px;"
+                        oninput="onExamCodeInput()" required>
+                    <span id="examCodeStatusIcon"
+                        style="position:absolute;right:12px;top:50%;transform:translateY(-50%);display:none;"></span>
+                </div>
+                <div id="examHostBanner"
+                    style="display:none;margin-top:8px;padding:8px 12px;border-radius:var(--radius-sm);background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);font-size:0.85rem;color:var(--accent-cyan);">
+                </div>
+            </div>
+
+            <div class="form-group" style="max-width:400px;margin:0 auto 16px;text-align:left;">
+                <label for="candidateName">Your Full Name <span style="color:var(--accent-cyan);">*</span></label>
+                <input type="text" id="candidateName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group" style="max-width:400px;margin:0 auto 24px;text-align:left;">
+                <label for="candidateEmail">Your Email <span style="color:var(--accent-cyan);">*</span></label>
+                <input type="email" id="candidateEmail" placeholder="you@example.com" required>
+            </div>
+            <button class="btn btn-primary btn-lg" id="startExamBtn" onclick="startInterview()">Start Examination →</button>
+            <br><br>
+            <a href="index.html" style="color:var(--text-muted);font-size:0.85rem;">← Back to Home</a>
+        </div>
+
+        <!-- Examination In Progress -->
+        <div id="interviewScreen" style="display:none;">
+            <div class="interview-header">
+                <h1>Examination <span class="gradient-text">In Progress</span></h1>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
+                    <div>
+                        <span id="candidateInfo" style="color:var(--text-secondary);font-size:0.9rem;"></span>
+                        <div id="activeExamHostTag"
+                            style="font-size:0.8rem;color:var(--accent-cyan);margin-top:2px;font-weight:500;"></div>
+                    </div>
+                    <div class="timer-display" id="timer"><svg class="icon-inline" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg><span>03:00</span></div>
+                </div>
+            </div>
+
+            <div class="interview-progress">
+                <div class="progress-info">
+                    <span id="progressLabel">Question 1 of 10</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" id="progressBar" style="width:0%"></div>
+                </div>
+            </div>
+
+            <div class="glass-card question-card" id="questionCard">
+                <div class="q-category">
+                    <span class="badge badge-info" id="qBadgeCategory">Technical</span>
+                    <span class="badge badge-warning" id="qBadgeDifficulty">Medium</span>
+                    <span class="badge" style="background:rgba(139,92,246,0.15);color:var(--accent-violet);"
+                        id="qBadgePoints">15 pts</span>
+                </div>
+                <h2 id="questionText" style="margin-bottom:20px;line-height:1.4;">Loading question...</h2>
+                <div class="mcq-container" id="mcqContainer">
+                    <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:700;margin-bottom:12px;">
+                        Select the correct answer:
+                    </div>
+                    <div class="mcq-options-list" id="mcqOptionsList" style="display:flex;flex-direction:column;gap:12px;"></div>
+                    <div id="selectionStatus" style="font-size:0.85rem;color:var(--text-muted);margin-top:14px;">
+                        Please choose one of the options above to proceed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-nav">
+                <button class="btn btn-outline" id="prevBtn" onclick="prevQuestion()" disabled>← Previous</button>
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next Question →</button>
+            </div>
+        </div>
+
+        <!-- Complete Screen -->
+        <div id="completeScreen" style="display:none;" class="interview-complete">
+            <div class="complete-icon-badge">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h1>Examination <span class="gradient-text">Submitted!</span></h1>
+            <p>Your examination responses have been submitted and automatically evaluated.</p>
+            <p id="submittedToAdminInfo"
+                style="font-size:0.85rem;color:var(--accent-cyan);margin-top:-10px;margin-bottom:20px;"></p>
+            <div class="glass-card" style="max-width:400px;margin:0 auto 32px;padding:24px;text-align:center;">
+                <h3 style="font-family:var(--font-heading);font-size:2.5rem;margin-bottom:4px;" id="finalScore">0%</h3>
+                <p style="color:var(--text-secondary);">Overall Score</p>
+                <div style="margin-top:12px;" id="finalBadge"></div>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/app.js?v=4"></script>
+    <script src="js/interview.js?v=4"></script>
+</body>
+
+</html>

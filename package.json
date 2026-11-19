@@ -1,0 +1,20 @@
+{
+  "name": "quizora",
+  "version": "1.0.0",
+  "description": "Quizora - Smart Online Examination & Evaluation Platform",
+  "scripts": {
+    "start": "node app/backend/server.js",
+    "dev:backend": "node --watch app/backend/server.js",
+    "serve:frontend": "python -m http.server 3000 --directory app/frontend"
+  },
+  "keywords": [
+    "quizora",
+    "examination-platform",
+    "online-exam",
+    "mcq-evaluation",
+    "fullstack",
+    "express"
+  ],
+  "author": "Quizora Team",
+  "license": "MIT"
+}

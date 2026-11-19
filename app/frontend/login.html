@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login or Sign Up for Quizora Online Examination System">
+    <title>Authentication - Quizora</title>
+    <link rel="stylesheet" href="css/styles.css?v=6">
+</head>
+
+<body>
+    <div class="login-page">
+        <!-- Left Hero Panel -->
+        <div class="login-panel-left">
+            <h2>Welcome to <span class="gradient-text">Quizora</span></h2>
+            <p>Quizora Online Examination System — Streamlined exam management with multi-instructor isolation.</p>
+
+            <div
+                style="width:85%;max-width:380px;margin-top:36px;padding:26px;border-radius:var(--radius-lg);background:var(--bg-card);border:1px solid var(--border-glass);backdrop-filter:blur(20px);">
+                <div
+                    style="display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-glass);">
+                    <div
+                        style="width:42px;height:42px;border-radius:var(--radius-sm);background:rgba(34,211,238,0.12);border:1px solid rgba(34,211,238,0.25);display:flex;align-items:center;justify-content:center;color:var(--accent-cyan);flex-shrink:0;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="font-family:var(--font-heading);font-weight:700;font-size:1.05rem;">Multi-Admin
+                            Portal</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted);">Separate questions & exam codes</div>
+                    </div>
+                </div>
+
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div
+                        style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--radius-sm);background:var(--bg-glass);border:1px solid var(--border-glass);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span style="font-size:0.85rem;color:var(--text-secondary);">Isolated Question Libraries</span>
+                    </div>
+                    <div
+                        style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--radius-sm);background:var(--bg-glass);border:1px solid var(--border-glass);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-violet)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <span style="font-size:0.85rem;color:var(--text-secondary);">Unique Student Exam Codes</span>
+                    </div>
+                    <div
+                        style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--radius-sm);background:var(--bg-glass);border:1px solid var(--border-glass);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 14 14"></polyline>
+                        </svg>
+                        <span style="font-size:0.85rem;color:var(--text-secondary);">Automated Instant Grading</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Form Panel -->
+        <div class="login-panel-right">
+            <div class="login-form-wrapper animate-fade-up">
+                <!-- Mode Switch Tabs (Sign In vs Create Account) -->
+                <div id="authTabsArea"
+                    style="display:flex;border-bottom:1px solid var(--border-glass);margin-bottom:24px;">
+                    <button type="button" id="tabSignIn" onclick="setAuthMode('signin')"
+                        style="flex:1;padding:12px 16px;background:none;border:none;border-bottom:2px solid var(--accent-cyan);color:var(--text-primary);font-weight:700;font-size:1rem;cursor:pointer;">Sign
+                        In</button>
+                    <button type="button" id="tabSignUp" onclick="setAuthMode('signup')"
+                        style="flex:1;padding:12px 16px;background:none;border:none;border-bottom:2px solid transparent;color:var(--text-muted);font-weight:600;font-size:1rem;cursor:pointer;">Create
+                        Account</button>
+                </div>
+
+                <div id="authHeaderArea" style="margin-bottom:20px;">
+                    <h2 id="authHeading" style="font-size:1.6rem;">Instructor Sign In</h2>
+                    <p class="subtitle" id="authSubtitle">Enter your credentials to manage exams and review student
+                        evaluations</p>
+                </div>
+
+                <!-- Admin / Instructor Form -->
+                <form id="authForm" onsubmit="handleAuthSubmit(event)">
+                    <!-- Full Name (Only for Create Account) -->
+                    <div class="form-group" id="nameGroup" style="display:none;">
+                        <label for="userName">Full Name <span style="color:var(--accent-cyan);">*</span></label>
+                        <input type="text" id="userName" placeholder="e.g. Dr. Rajesh Patil">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userEmail">Email Address <span style="color:var(--accent-cyan);">*</span></label>
+                        <input type="email" id="userEmail" placeholder="admin@quizora.com" required
+                            autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userPassword">Password <span style="color:var(--accent-cyan);">*</span></label>
+                        <input type="password" id="userPassword" placeholder="Enter your password" required
+                            autocomplete="current-password">
+                    </div>
+
+                    <!-- Extra fields for Sign Up Mode -->
+                    <div id="signUpFields" style="display:none;">
+                        <div class="form-group" id="examCodeGroup">
+                            <label for="customExamCode">Student Exam Access Code <span
+                                    style="color:var(--accent-cyan);font-weight:normal;">(For your
+                                    students)</span></label>
+                            <input type="text" id="customExamCode" placeholder="e.g. QUIZ-CS101"
+                                style="font-family:monospace;letter-spacing:1px;text-transform:uppercase;font-weight:600;">
+                            <small style="color:var(--text-muted);display:block;margin-top:4px;">Students will enter
+                                this code on the exam page to answer your questions.</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary form-btn" id="submitBtn"
+                        style="margin-top:8px;width:100%;padding:13px;font-size:1rem;">Sign In →</button>
+                </form>
+
+                <div id="switchAuthArea" style="margin-top:20px;text-align:center;">
+                    <span id="switchAuthHint" style="color:var(--text-secondary);font-size:0.85rem;">New instructor?
+                    </span>
+                    <a href="#" id="switchAuthLink" onclick="toggleAuthModeLink(event)"
+                        style="color:var(--accent-cyan);font-weight:600;font-size:0.85rem;">Create Admin Account</a>
+                </div>
+
+                <p id="studentDirectLinkArea"
+                    style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid var(--border-glass);color:var(--text-secondary);font-size:0.85rem;">
+                    Students taking an exam? <a href="interview.html"
+                        style="color:var(--accent-cyan);font-weight:600;">Take Exam with Access Code →</a>
+                </p>
+                <a href="index.html"
+                    style="display:block;text-align:center;margin-top:10px;color:var(--text-muted);font-size:0.85rem;">←
+                    Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/app.js?v=3"></script>
+    <script>
+        let currentMode = 'signin'; // 'signin' or 'signup'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initApp();
+            const params = new URLSearchParams(window.location.search);
+            const roleParam = params.get('role');
+            const codeParam = params.get('code');
+            const mode = params.get('mode');
+
+            if (roleParam === 'candidate' || codeParam) {
+                // Students are routed directly to the exam room
+                window.location.href = codeParam ? `interview.html?code=${encodeURIComponent(codeParam)}` : 'interview.html';
+                return;
+            }
+
+            if (mode === 'signup') {
+                setAuthMode('signup');
+            } else {
+                setAuthMode('signin');
+            }
+        });
+
+        function setAuthMode(mode) {
+            currentMode = mode;
+            const tabIn = document.getElementById('tabSignIn');
+            const tabUp = document.getElementById('tabSignUp');
+            const heading = document.getElementById('authHeading');
+            const subtitle = document.getElementById('authSubtitle');
+            const submitBtn = document.getElementById('submitBtn');
+            const nameGroup = document.getElementById('nameGroup');
+            const nameInput = document.getElementById('userName');
+            const signUpFields = document.getElementById('signUpFields');
+            const switchHint = document.getElementById('switchAuthHint');
+            const switchLink = document.getElementById('switchAuthLink');
+
+            if (mode === 'signin') {
+                if (tabIn) {
+                    tabIn.style.borderBottom = '2px solid var(--accent-cyan)';
+                    tabIn.style.color = 'var(--text-primary)';
+                }
+                if (tabUp) {
+                    tabUp.style.borderBottom = '2px solid transparent';
+                    tabUp.style.color = 'var(--text-muted)';
+                }
+
+                if (heading) heading.textContent = 'Instructor Sign In';
+                if (subtitle) subtitle.textContent = 'Enter your credentials to manage exams and review student evaluations';
+                if (submitBtn) submitBtn.textContent = 'Sign In →';
+                if (nameGroup) nameGroup.style.display = 'none';
+                if (nameInput) nameInput.required = false;
+                if (signUpFields) signUpFields.style.display = 'none';
+
+                if (switchHint) switchHint.textContent = "New instructor? ";
+                if (switchLink) switchLink.textContent = 'Create Admin Account';
+            } else {
+                if (tabUp) {
+                    tabUp.style.borderBottom = '2px solid var(--accent-cyan)';
+                    tabUp.style.color = 'var(--text-primary)';
+                }
+                if (tabIn) {
+                    tabIn.style.borderBottom = '2px solid transparent';
+                    tabIn.style.color = 'var(--text-muted)';
+                }
+
+                if (heading) heading.textContent = 'Create Instructor Account';
+                if (subtitle) subtitle.textContent = 'Register a new instructor account with your custom exam code';
+                if (submitBtn) submitBtn.textContent = 'Create Account & Sign In →';
+                if (nameGroup) nameGroup.style.display = 'block';
+                if (nameInput) nameInput.required = true;
+                if (signUpFields) signUpFields.style.display = 'block';
+
+                const codeInput = document.getElementById('customExamCode');
+                if (codeInput && !codeInput.value) {
+                    codeInput.value = typeof generateExamCode === 'function' ? generateExamCode('QUIZ') : ('QUIZ-' + Math.floor(1000 + Math.random() * 9000));
+                }
+
+                if (switchHint) switchHint.textContent = 'Already have an instructor account? ';
+                if (switchLink) switchLink.textContent = 'Sign In';
+            }
+            updateExamCodeVisibility();
+        }
+
+        function toggleAuthModeLink(e) {
+            e.preventDefault();
+            setAuthMode(currentMode === 'signin' ? 'signup' : 'signin');
+        }
+
+        function updateExamCodeVisibility() {
+            const examGroup = document.getElementById('examCodeGroup');
+            if (examGroup) {
+                examGroup.style.display = currentMode === 'signup' ? 'block' : 'none';
+            }
+        }
+
+        function safeToast(msg, type = 'info') {
+            if (typeof showToast === 'function') {
+                showToast(msg, type);
+            } else {
+                console.log(type.toUpperCase() + ': ' + msg);
+            }
+        }
+
+        async function handleAuthSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const emailInput = document.getElementById('userEmail');
+            const passwordInput = document.getElementById('userPassword');
+            const email = (emailInput ? emailInput.value : '').trim().toLowerCase();
+            const password = passwordInput ? passwordInput.value : '';
+
+            if (!email || !password) {
+                safeToast('Please fill in both email and password.', 'error');
+                return;
+            }
+
+            if (password.length < 4) {
+                safeToast('Password must be at least 4 characters long.', 'error');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing...';
+
+            try {
+                if (currentMode === 'signup') {
+                    const nameInput = document.getElementById('userName');
+                    const name = (nameInput ? nameInput.value : '').trim();
+                    if (!name) {
+                        safeToast('Please enter your full name.', 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Create Account & Sign In →';
+                        if (nameInput) nameInput.focus();
+                        return;
+                    }
+                    const codeInput = document.getElementById('customExamCode');
+                    const customCode = (codeInput ? codeInput.value : '').trim();
+                    const res = await registerAccount('admin', name, email, password, customCode);
+
+                    if (!res.success) {
+                        safeToast(res.message, 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Create Account & Sign In →';
+                        return;
+                    }
+
+                    safeToast(`Account created successfully! Welcome, ${name}.`, 'success');
+                    setTimeout(() => {
+                        window.location.href = 'admin-dashboard.html';
+                    }, 250);
+
+                } else {
+                    // Sign In
+                    const res = await authenticateUser(email, password, 'admin');
+
+                    if (!res.success) {
+                        // If account doesn't exist, switch to Create Account tab
+                        if (res.message && (res.message.includes('Account not found') || res.message.includes('not found'))) {
+                            setAuthMode('signup');
+                            safeToast('No account found for this email. Switched to Create Account — please enter your Full Name.', 'info');
+                            const nameInput = document.getElementById('userName');
+                            if (nameInput) nameInput.focus();
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Create Account & Sign In →';
+                            return;
+                        }
+                        safeToast(res.message, 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Sign In →';
+                        return;
+                    }
+
+                    safeToast(`Welcome back, ${res.user.name || 'User'}!`, 'success');
+                    setTimeout(() => {
+                        window.location.href = 'admin-dashboard.html';
+                    }, 250);
+                }
+            } catch (err) {
+                console.error('Auth error:', err);
+                safeToast('Authentication error: ' + (err.message || 'Please check your connection and try again.'), 'error');
+                submitBtn.disabled = false;
+                submitBtn.textContent = currentMode === 'signup' ? 'Create Account & Sign In →' : 'Sign In →';
+            }
+        }
+    </script>
+</body>
+
+</html>

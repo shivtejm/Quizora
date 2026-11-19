@@ -1,0 +1,80 @@
+[
+  {
+    "id": 0,
+    "name": "Quizora Administrator",
+    "email": "admin@quizora.com",
+    "password": "admin123",
+    "role": "admin",
+    "exam_code": "QUIZ-TECH",
+    "examCode": "QUIZ-TECH"
+  },
+  {
+    "id": 1,
+    "name": "Senior HR Admin",
+    "email": "admin@sies.ai",
+    "password": "admin123",
+    "role": "admin",
+    "exam_code": "SIES-TECH",
+    "examCode": "SIES-TECH"
+  },
+  {
+    "id": 1795006792513,
+    "name": "Dr. Ramesh Sharma",
+    "email": "ramesh.sharma@institution.edu",
+    "password": "securePassword123",
+    "role": "admin",
+    "exam_code": "RAMESH-2026",
+    "examCode": "RAMESH-2026",
+    "created_at": "2026-11-18T12:59:52.513Z"
+  },
+  {
+    "id": 1795007382644,
+    "name": "Shivtej Hatme",
+    "email": "hatmeshivtej0@gmail.com",
+    "password": "password123",
+    "role": "admin",
+    "exam_code": "SHIV-TECH",
+    "examCode": "SHIV-TECH",
+    "created_at": "2026-11-18T13:09:42.644Z"
+  },
+  {
+    "id": 1795007530700,
+    "name": "Prof. Ananya Sen",
+    "email": "ananya.sen@university.ac.in",
+    "password": "password999",
+    "role": "admin",
+    "exam_code": "ANANYA-2026",
+    "examCode": "ANANYA-2026",
+    "created_at": "2026-11-18T13:12:10.700Z"
+  },
+  {
+    "id": 1795008113018,
+    "name": "Admin Test",
+    "email": "admintest@sies.ai",
+    "password": "Password123!",
+    "role": "admin",
+    "exam_code": "ADMI-9232",
+    "examCode": "ADMI-9232",
+    "created_at": "2026-11-18T13:21:53.018Z"
+  },
+  {
+    "id": 1795009989657,
+    "name": "Shivtej Mahatme",
+    "email": "shivtej.connect@gmail.com",
+    "password": "12345",
+    "role": "admin",
+    "exam_code": "12345",
+    "examCode": "12345",
+    "created_at": "2026-11-18T13:53:09.657Z"
+  },
+  {
+    "id": 1795011198843,
+    "name": "Sakshi Gade",
+    "email": "sakshi@gmail.com",
+    "password": "12345",
+    "role": "admin",
+    "exam_code": "54321",
+    "examCode": "54321",
+    "created_at": "2026-11-18T14:13:18.843Z"
+  }
+]
